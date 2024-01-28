@@ -66,23 +66,6 @@ const images = [
     description: 'Lighthouse Coast Sea',
   },
 ];
-// const gallery = document.querySelector('.gallery');
-
-// function createGalleryList() {
-//   const markup = images
-//     .map(el => {
-//       return `<li class="gallery-item">
-//   <a class="gallery-link" href="large-image.jpg">
-//     <img class="gallery-image" src="small-image.jpg" alt="Image description" />
-//   </a>
-// </li>`;
-//     })
-//     .join('');
-//   return markup;
-// }
-// const markup = createGalleryList();
-
-// gallery.insertAdjacentHTML('afterbegin', markup);
 
 function createGalleryList(images) {
   const markup = images
@@ -97,17 +80,6 @@ function createGalleryList(images) {
   return markup;
 }
 
-// const createGalleryList = images
-//   .map(
-//     ({ original, preview, description }) =>
-//       `<li class="gallery-item">
-//     <a class="gallery-link" href="${original}" data-source="${original}" data-description="${description}">
-//       <img class="gallery-image" src="${preview}" alt="${description}" />
-//     </a>
-//   </li>`
-//   )
-//   .join('');
-
 const gallery = document.querySelector('.gallery');
 const markup = createGalleryList(images);
 gallery.insertAdjacentHTML('afterbegin', markup);
@@ -116,17 +88,3 @@ let galleryMy = new SimpleLightbox('.gallery a', {
   captionData: 'alt',
   captionDelay: 250,
 });
-
-//let galleryMy = new SimpleLightbox('.gallery a');
-
-// const gallery = document.querySelector('.gallery');
-// const createGalleryList = images
-//   .map(
-//     ({ original, preview, description }) =>
-//       `<li class="gallery-item">
-//   <a class="gallery-link" href="large-image.jpg">
-//     <img class="gallery-image" src="small-image.jpg" alt="Image description" />
-//   </a>
-// </li>`
-//   )
-//   .join('');
