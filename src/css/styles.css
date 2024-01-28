@@ -23,3 +23,148 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+/* Gallery */
+
+body {
+  margin: 0;
+  width: 1440px;
+  height: 696px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+  padding: 24px 156px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.gallery-item {
+  width: 360px;
+  height: 200px;
+}
+
+.gallery-link {
+  display: block;
+  text-decoration: none;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  background: url(<path-to-image>), lightgray -246.133px -4.929px / 127.08% 147.165% no-repeat;
+}
+
+.basicLightbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1440px;
+  height: 696px;
+  background: rgba(46, 47, 66, 0.80);
+}
+
+
+.basicLightbox__image {
+  width: 1112px;
+  height: 640px;
+  flex-shrink: 0;
+  object-fit: cover;
+  padding: 24px 156px;
+}
+
+.basicLightbox__placeholder>img:first-child:last-child {
+  width: 1112px;
+  height: 640px;
+}
+
+
+/*Feedback-form*/
+
+.feedback-form {
+  display: inline-flex;
+  width: 360px;
+  height: 248px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 8px;
+  background: #FFF;
+}
+
+
+.feedback-form label:first-child {
+  color: #2E2F42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  margin-bottom: 8px;
+}
+
+.feedback-form input {
+  display: flex;
+  width: 360px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #808080;
+  margin-bottom: 8px;
+}
+
+.feedback-form input:hover {
+  border-color: #000000;
+}
+
+
+.feedback-form label:last-child {
+  color: #2E2F42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  margin-bottom: 8px;
+}
+
+.feedback-form textarea {
+  display: flex;
+  width: 360px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #808080;
+  margin-bottom: 16px;
+}
+
+.feedback-form textarea:hover {
+  border-color: #000000;
+}
+
+
+.feedback-form button {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #4E75FF;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+}
+
+.feedback-form button:hover {
+  background: #6C8CFF;
+}

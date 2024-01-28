@@ -111,7 +111,14 @@ function createGalleryList(images) {
 const gallery = document.querySelector('.gallery');
 const markup = createGalleryList(images);
 gallery.insertAdjacentHTML('afterbegin', markup);
-let galleryMy = new SimpleLightbox('.gallery a');
+
+let galleryMy = new SimpleLightbox('.gallery a', {
+  captionData: 'alt',
+  captionDelay: 250,
+});
+
+//let galleryMy = new SimpleLightbox('.gallery a');
+
 // const gallery = document.querySelector('.gallery');
 // const createGalleryList = images
 //   .map(
