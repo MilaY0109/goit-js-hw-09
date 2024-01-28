@@ -85,23 +85,6 @@ const markup = createGalleryList(images);
 gallery.insertAdjacentHTML('afterbegin', markup);
 
 let galleryMy = new SimpleLightbox('.gallery a', {
-  captionData: 'alt',
+  captionsData: 'alt',
   captionDelay: 250,
 });
-
-// -------Это код, который  пропустила через Minify-js-----//
-// function createGalleryList(a) {
-//   return a
-//     .map(
-//       ({ original: a, preview: e, description: l }) =>
-//         `<li class="gallery-item">\n    <a class="gallery-link" href="${a}" data-source="${a}" data-description="${l}">\n      <img class="gallery-image" src="${e}" alt="${l}" />\n    </a>\n  </li>`
-//     )
-//     .join('');
-// }
-// const gallery = document.querySelector('.gallery'),
-//   markup = createGalleryList(images);
-// gallery.insertAdjacentHTML('afterbegin', markup);
-// let galleryMy = new SimpleLightbox('.gallery a', {
-//   captionData: 'alt',
-//   captionDelay: 250,
-// });
